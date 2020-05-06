@@ -9,7 +9,6 @@ def load_library(file)
   end
   empty_hash
 end
-# pp load_library "./lib/emoticons.yml"
 def get_japanese_emoticon(library, emoticon)
   emotions = load_library(library)
   emotions.each do |key, value|
@@ -19,7 +18,7 @@ def get_japanese_emoticon(library, emoticon)
   end
   return "Sorry, that emoticon was not found"
 end
-def get_english_meaning(library, emoticon)
+def get_english_meaning
   emotions = load_library(library)
   emotions.each do |key, value|
     if emotions[key][:japanese] == emoticon
